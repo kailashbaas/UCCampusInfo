@@ -1,0 +1,17 @@
+{% block menus %}
+    <header>
+        <h1>UCSB Dining Commons Menus</h1>
+    </header>
+    <table id='menus_table'>
+        <tr>
+            <th>Dining Common</th>
+            <th>Menu</th>
+        </tr>
+        {% for menu in menus %}
+            <tr>
+                <td>{{ menu.dining_common }}</td>
+                <td>{{ menu.menu }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
