@@ -3,15 +3,18 @@
         <h1>UCSB Dining Commons Menus</h1>
     </header>
     <table id='menus_table'>
-        <tr>
-            <th>Dining Common</th>
-            <th>Menu</th>
-        </tr>
-        {% for menu in menus %}
             <tr>
-                <td>{{ menu.dining_common }}</td>
-                <td>{{ menu.menu }}</td>
+            {% for menu in menus %}
+                <th>{{ menu.dining_common }}</th>
+            {% endfor %}
             </tr>
-        {% endfor %}
+            <tr>
+                {% for menu in menus %}
+                    <h6>Breakfast</h6>
+                    <ul>
+                        <li>{{ menu.breakfast_menu }}</li>
+                    </ul>
+                {% endfor %}
+            </tr>
     </table>
 {% endblock %}
